@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Verifikasi Server</title>
+</head>
+<body>
+    <h1>Hasil Verifikasi Server</h1>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nama_server = $_POST["nama_server"];
+        $alamat_server = $_POST["alamat_server"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        // Di sini Anda dapat melakukan validasi atau tindakan lain sesuai kebutuhan Anda
+        // Misalnya, memeriksa kecocokan dengan server yang ada, mengirim permintaan HTTP, dll.
+
+        // Menampilkan hasil verifikasi
+        echo "<p>Verifikasi berhasil!</p>";
+        echo "<p>Nama Server: $nama_server</p>";
+        echo "<p>Alamat Server: $alamat_server</p>";
+        echo "<p>Username: $username</p>";
+    } else {
+        echo "<p>Data tidak diterima.</p>";
+    }
+    ?>
+</body>
+</html>
